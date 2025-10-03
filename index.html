@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dice Game — Stake-like</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-light">
+
+  <div class="container-fluid min-vh-100 d-flex flex-column justify-content-center align-items-center">
+    <div class="row w-100 justify-content-center mb-4">
+      <div class="col-auto">
+        <input id="gameStatus" class="form-control status-box text-center" type="text" readonly value="Player 1's Turn">
+      </div>
+    </div>
+
+    <div class="row g-4 w-100 align-items-center justify-content-center" style="min-height:60vh;">
+
+      <div class="col-12 col-md-5 d-flex justify-content-end">
+        <div class="card text-center player player1 minimal-card shadow-lg">
+          <div class="card-body">
+            <h2 class="card-title">Player 1</h2>
+            <img class="img1 img-fluid" src="./dice0.png" alt="dice">
+            <div class="dice-value fs-2 mt-3" id="diceValue1">0</div>
+            <div class="score-label mt-2">Score: <span id="score1">0</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-2 d-flex flex-column align-items-center">
+        <div class="d-flex flex-column gap-2 w-100 align-items-center">
+          <button id="rollBtn" class="btn btn-lg w-75 btn-roll">Roll Dice</button>
+          <button id="holdBtn" class="btn btn-lg w-75 btn-hold">Hold</button>
+          <button id="resetBtn" class="btn btn-lg w-75 btn-reset">Start/Reset Game</button>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-5 d-flex justify-content-start">
+        <div class="card text-center player player2 minimal-card shadow-lg">
+          <div class="card-body">
+            <h2 class="card-title">Player 2</h2>
+            <img class="img2 img-fluid" src="./dice0.png" alt="dice">
+            <div class="dice-value fs-2 mt-3" id="diceValue2">0</div>
+            <div class="score-label mt-2">Score: <span id="score2">0</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div> 
+
+  </div> 
+
+  <script src="script.js"></script>
+</body>
+</html>
