@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 const rollBtn = document.querySelector('#rollBtn');
 const holdBtn = document.querySelector('#holdBtn');
