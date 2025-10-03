@@ -7,17 +7,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-dark text-light">
-
   <div class="container-fluid min-vh-100 d-flex flex-column justify-content-center align-items-center">
-    <div class="row w-100 justify-content-center mb-4">
-      <div class="col-auto">
-        <input id="gameStatus" class="form-control status-box text-center" type="text" readonly value="Player 1's Turn">
-      </div>
-    </div>
-
-    <div class="row g-4 w-100 align-items-center justify-content-center" style="min-height:60vh;">
-
-      <div class="col-12 col-md-5 d-flex justify-content-end">
+    <div class="status-box" id="gameStatus">Player 1's Turn</div>
+    <div class="game-row d-flex flex-row justify-content-center align-items-center w-100" style="gap:2rem;">
+      <div class="player-card" id="player1">
         <div class="card text-center player player1 minimal-card shadow-lg">
           <div class="card-body">
             <h2 class="card-title">Player 1</h2>
@@ -28,15 +21,13 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-2 d-flex flex-column align-items-center">
-        <div class="d-flex flex-column gap-2 w-100 align-items-center">
-          <button id="rollBtn" class="btn btn-lg w-75 btn-roll">Roll Dice</button>
-          <button id="holdBtn" class="btn btn-lg w-75 btn-hold">Hold</button>
-          <button id="resetBtn" class="btn btn-lg w-75 btn-reset">Start/Reset Game</button>
-        </div>
+      <div id="controls-area" class="d-flex flex-column align-items-center justify-content-center">
+        <button class="btn btn-roll mb-3" id="rollBtn">🎲 Roll Dice</button>
+        <button class="btn btn-hold mb-3" id="holdBtn">✋ Hold</button>
+        <button class="btn btn-reset" id="resetBtn">🔄 Start/Reset Game</button>
       </div>
 
-      <div class="col-12 col-md-5 d-flex justify-content-start">
+      <div class="player-card" id="player2">
         <div class="card text-center player player2 minimal-card shadow-lg">
           <div class="card-body">
             <h2 class="card-title">Player 2</h2>
@@ -46,11 +37,8 @@
           </div>
         </div>
       </div>
-
     </div> 
-
   </div> 
-
   <script src="script.js"></script>
 </body>
 </html>
